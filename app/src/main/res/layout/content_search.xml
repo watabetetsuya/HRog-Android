@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_search" tools:context="jp.co.goalist.hrog.hrog.SearchActivity"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout4"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="7dp"
+        android:background="#ffffff">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton2"
+            android:layout_alignBottom="@+id/linearLayout4"
+            android:layout_alignRight="@+id/linearLayout4"
+            android:layout_alignEnd="@+id/linearLayout4"
+            android:src="@drawable/pre_image"
+            android:background="#ffffff"
+            android:onClick="onClickBackBtnFrmSearch"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#d8d7d5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView2"
+                android:src="@drawable/ios_search"
+                android:layout_weight="0.06"
+                android:layout_margin="3dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_form"
+                android:layout_weight="1"
+                android:background="#d8d7d5"
+                android:hint="ニュースを検索"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                android:focusable="true"
+                android:enabled="true"
+                android:editable="true"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.06"
+                android:src="@drawable/ios_deleate"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="7dp"
+                android:clickable="true"
+                android:id="@+id/search_text_delete"
+                android:onClick="onClickSearchTextDeleteBtn"
+                android:background="@null" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/search_result"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
